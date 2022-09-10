@@ -59,45 +59,17 @@ function ventaFig(){
   alert(`El total a pagar seria $ ${precioFinal}`);
 }
 
-// Fixture Mundial
+const precios = [
+  {prod: "paquete de figuritas", precio: 150},
+  {prod: "album tapa blanda", precio: 750},
+  {prod: "album tapa dura", precio: 1200},
+]
 
-const grupoA = [{ pais:"Qatar" , rankingFIFA: 48},
-                { pais:"Ecuador" , rankingFIFA: 44},
-                { pais:"Senegal" , rankingFIFA: 18},
-                { pais:"Holanda" , rankingFIFA: 8}];
+const descuento = precios.map((elem) =>{
+  return{
+    prod : elem.prod,
+    precio : elem.precio * 0.90
+  }
+})
 
-const grupoB = [{ pais:"Inglaterra" , rankingFIFA:5},
-                { pais:"Iran" , rankingFIFA: 22},
-                { pais:"Estados Unidos" , rankingFIFA: 14},
-                { pais:"Gales" , rankingFIFA:19}];
-
-const grupoC = [{ pais:"Argentina" , rankingFIFA: 3},
-                { pais:"Arabia Saudita" , rankingFIFA: 53},
-                { pais:"Mexico" , rankingFIFA: 12},
-                { pais:"Polonia" , rankingFIFA: 26}];
-
-const grupoD = [{ pais:"Francia" , rankingFIFA: 4},
-                { pais:"Australia" , rankingFIFA:39},
-                { pais:"Dinamarca" , rankingFIFA: 10},
-                { pais:"Tunez" , rankingFIFA: 30}];
-
-const grupoE = [{ pais:"Espana" , rankingFIFA: 6},
-                { pais:"Costa Rica" , rankingFIFA: 34},
-                { pais:"Alemania" , rankingFIFA: 11},
-                { pais:"Japon" , rankingFIFA: 24}];
-
-const grupoF = [{ pais:"Belgica" , rankingFIFA: 2},
-                { pais:"Canada" , rankingFIFA: 43},
-                { pais:"Marruecos" , rankingFIFA: 23},
-                { pais:"Croacia" , rankingFIFA: 15}];
-
-const grupoG = [{ pais:"Brasil" , rankingFIFA: 1},
-                { pais:"Serbia" , rankingFIFA: 25},
-                { pais:"Suiza" , rankingFIFA: 16},
-                { pais:"Camerun" , rankingFIFA: 38}];
-      
-const grupoH = [{ pais:"Portugal" , rankingFIFA: 9},
-                { pais:"Ghana" , rankingFIFA: 60},
-                { pais:"Uruguay" , rankingFIFA: 13},
-                { pais:"Corea del Sur" , rankingFIFA: 28}];
-        
+console.log(descuento);

@@ -1,22 +1,19 @@
 //---------Funcion inicial
 
-function pregInicial(){
-  let direccion = prompt("desea comprar o cambiar figuritas?")
-  if(direccion.toLowerCase() == "comprar"){
-    let respuestaDir = "Muy bien, ingrese la cantidad de paquetes que desea" 
-    alert(respuestaDir)
-    ventaFig()
-  }
-  else if(direccion.toLowerCase() == "cambiar"){
-    preguntaFig()
-  }
-  else if (direccion.toLowerCase() == "no"){
-    return
-  }
-  else alert("Por favor, responder comprar o cambiar")
-  pregInicial()
+function pregInicial() {
+  let direccion = prompt("desea comprar o cambiar figuritas?");
+  if (direccion.toLowerCase() == "comprar") {
+    let respuestaDir = "Muy bien, ingrese la cantidad de paquetes que desea";
+    alert(respuestaDir);
+    ventaFig();
+  } else if (direccion.toLowerCase() == "cambiar") {
+    preguntaFig();
+  } else if (direccion.toLowerCase() == "no") {
+    return;
+  } else alert("Por favor, responder comprar o cambiar");
+  pregInicial();
 }
-pregInicial()
+pregInicial();
 
 //----------------Funcion de Cambio
 function preguntaFig() {
@@ -52,24 +49,25 @@ function cambioFig() {
 }
 
 //--------- Venta de Figuritas
-function ventaFig(){
-  let cantPaq = prompt("cuantos paquetes desea comprar? Responder con numero")
-  let i = 150
-  let precioFinal = cantPaq * i
+function ventaFig() {
+  let cantPaq = prompt("cuantos paquetes desea comprar? Responder con numero");
+  let i = 150;
+  let precioFinal = cantPaq * i;
   alert(`El total a pagar seria $ ${precioFinal}`);
 }
 
+//----------array de prod y descuento mayorista
 const precios = [
-  {prod: "paquete de figuritas", precio: 150},
-  {prod: "album tapa blanda", precio: 750},
-  {prod: "album tapa dura", precio: 1200},
-]
+  { prod: "paquete de figuritas", precio: 150 },
+  { prod: "album tapa blanda", precio: 750 },
+  { prod: "album tapa dura", precio: 1200 },
+];
 
-const descuento = precios.map((elem) =>{
-  return{
-    prod : elem.prod,
-    precio : elem.precio * 0.90
-  }
-})
+const descuento = precios.map((elem) => {
+  return {
+    prod: elem.prod,
+    precio: elem.precio * 0.9,
+  };
+});
 
 console.log(descuento);

@@ -1,12 +1,178 @@
+
 * {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    color:rgb(218, 218, 218) ;
+    list-style: none;
 }
 html{
-
+    background-color: rgb(146, 37, 79);
     background-image: url("../img/Fondo.jpg");
     width: 100%;
     height: 100%;
+}
+.navBar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+.navLogo {
+    justify-self: flex-start;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    transition: transform 0.2s;
+    width: 70%;
+}
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .navLinks a {
+    list-style: none;
+    text-decoration: none;
+    color: rgb(218, 218, 218);
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: end;
+  }
+#cuentaRegresiva{
+    background-image: url(https://cloudinary.fifa.com/transform/d3c2deff-a4a2-4f7b-a5db-cfa68c5d980a/FWC2022_Qatar_100Days_Banner_00-1?tx=c_fill,ar_2.33,g_auto,q_auto:best,w_1440);
+    height: 500px;
+}
+#cuentaRegresiva p{
+    color: rgb(218, 218, 218);
+    font-size: larger;
+}
+
+
+
+/* ----------------------- */
+.grupos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.grupo{
+  display: inline-block;
+  width: 12%;
+  border: solid 1px;
+}
+
+.faseGrupo{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 2vh;
+  justify-content: space-evenly;
+}
+.faseGrupo table{
+  border: solid 1px;
+  width: 20%;
+  margin: 10px 0;
+}
+
+td input{
+  width: 35px;
+}
+
+.grupLlaves{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.grupLlaves table{
+  margin: 0px 20px;
+}
+
+/* galeria campeones */
+.tituloCamp{
+  text-align: center;
+}
+
+#galeria {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  min-width: 600px;
+
+  padding: 0px;
+  margin: 20px 20px;
+}
+
+#galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#img-activa {
+  width: 100%;
+  height: auto;
+}
+
+/*Contenedor Principal del Lightbox*/
+
+#contenedor-principal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Contenedor interno del Lightbox*/
+
+#contenedor-interno {
+  border: 2px #f3f3f3 solid;
+  padding: 2px;
+  background: #3f3f3f;
+  max-width: 700px;
+  min-height: auto;
+  max-height: 80%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/*Botones*/
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #f3f3f3;
+}
+
+#btn-cierra {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 3rem;
+}
+
+#btn-retrocede {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 3rem;
+}
+
+#btn-adelanta {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 3rem;
 }

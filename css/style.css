@@ -176,3 +176,111 @@ button {
   right: 0;
   font-size: 3rem;
 }
+
+
+/* ------Estilos Tienda--------- */
+.tienda{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.itemTienda{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7);
+  /* background-color: rgb(124, 25, 63); */
+  background-color: white; 
+  filter: brightness(0.9);
+}
+.especProd{
+  margin: 10px;
+} 
+
+.imgProducto{
+  align-self: center;
+  width: 70%;
+  filter: brightness(1.1);
+  mix-blend-mode: normal;
+}
+.btnAgregar{
+  border: solid 2px black;
+  border-radius: 3px;
+  background-color: rgb(2, 228, 198);
+  width: 150px;
+  height: 30px;
+  font: 1.1em sans-serif;
+  color: rgb(153, 5, 54);
+}
+
+#carrito{
+  font-size: 3rem;
+}
+/* contenedor carrito */
+
+#btnCarrito {
+  font-size: 30px;
+  padding: 10px 20px;
+  transition: all .3s;
+}
+#btnCarrito:hover {
+  cursor: pointer;
+}
+
+.momodalCarrito {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modalAct {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modalCarrito {
+  position: relative;
+  background-color: grey;
+  min-width: 500px;
+  padding: 20px;
+  margin-top: -100%;
+  transition: all .5s;
+}
+
+.modalAct .modalCarrito {
+  margin-top: 0;
+}
+
+.modalCarrito h3 {
+  color:rgb(153, 5, 54) ;
+  padding-bottom: 5px;
+}
+.modalCarrito #carritoCerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color:rgb(153, 5, 54) ;
+  border: none;
+}
+.modalCarrito #carritoCerrar:hover {
+  cursor: pointer;
+}
+.modalCarrito #carritoCerrar:focus {
+  outline: none;
+}
+.modalCarrito .precioProducto {
+  padding-top: 10px;
+}

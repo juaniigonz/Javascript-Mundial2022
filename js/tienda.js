@@ -65,13 +65,14 @@ const cantidad = document.getElementById('cantidad')
 const precioTotal = document.getElementById("precioTotal")
 const cantidadTotal = document.getElementById('cantidadTotal')
 //-------------Carrito--------------//
-let carrito = [];
+var carrito = [ ];
 
 //-----localStorage-----------
 
 document.addEventListener('DOMContentLoaded', ()=>{
     if (localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
+        console.log(carrito)
         actCarrito()
     }
 })
@@ -132,7 +133,7 @@ const actCarrito = () => {
         const div = document.createElement("div");
         div.className = "prodEnCarrito";
         div.innerHTML = `
-        <p>${prod.nombre}</p>
+        <p>${prod.objeto}</p>
         <p> Precio: ${prod.precio}</p>
         <p> Cantidad : <span id="cantidad"> ${prod.cantidad}</span></p>
         <button onclick = "eliminarDelCarrito(${prod.id})" class="btnEliminar"><i class="fas fa-trash-alt"></i></button>
@@ -145,7 +146,7 @@ const actCarrito = () => {
     
     contadorCarrito.innerText = carrito.length
     //-------------Precio final
-    precioTotal.innerText = carrito.reduce((acc,prod) => acc + prod.precio,0)
+    precioTotal.innerText = carrito.reduce((acc,prod) => acc + (prod.precio * prod.cantidad),0)
 };
 
 

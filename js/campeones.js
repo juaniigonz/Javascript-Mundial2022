@@ -104,3 +104,7 @@ const retrocederImagen = () => {
 };
 
 btnRetrocede.addEventListener('click', retrocederImagen);
+
+
+
+

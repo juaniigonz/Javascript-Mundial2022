@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- estilos -->
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <!-- contador -->
+    <link rel="stylesheet" href="./dist/flipdown.css">
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Camino a Qatar</title>
 </head>
 <body>
     <header>
@@ -19,12 +24,21 @@
     </header>
     <main>
         <div id="cuentaRegresiva">
-            <p>Aca va a ir el contador para el mundial</p>
+            <h2>Falta para el mundial</h2>
+            <div id="cuentaRegresivaInt">
+            <img src="img/logo.png" class="cRLogo" alt="">
+            <div id="flipdown" class="flipdown"></div>
+            </div>
+            <p class="cRP">Como estamos re manijas con el mundial, y falta cada vez menos te invitamos a que pases por nuestra tienda y te 
+                equipes con todo lo que el hincha argentino necesita
         </div>
+    </p>
     </main>
     <footer>
 
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./index.js"></script>
+    <script src="./dist/flipdown.js"></script>
 </body>
 </html>

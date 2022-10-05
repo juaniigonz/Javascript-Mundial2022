@@ -45,11 +45,29 @@ html{
     background-image: url(https://cloudinary.fifa.com/transform/d3c2deff-a4a2-4f7b-a5db-cfa68c5d980a/FWC2022_Qatar_100Days_Banner_00-1?tx=c_fill,ar_2.33,g_auto,q_auto:best,w_1440);
     height: 500px;
 }
-#cuentaRegresiva p{
-    color: rgb(218, 218, 218);
-    font-size: larger;
+#cuentaRegresiva h2{
+  margin-left: 15vw;
+  font-size: 2rem;
 }
+#cuentaRegresivaInt{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
+}
+.cRP{
+  margin-top: 50px;
+  width: 600px;
+  align-self: center;
+  font-size: xx-large;
+}
+.cRLogo{
+width: 100px;
+height: 100px;
+}
+#flipdown{
+width: 50%;
+}
 
 
 /* ----------------------- */
@@ -284,3 +302,6 @@ button {
 .modalCarrito .precioProducto {
   padding-top: 10px;
 }
+
+
+

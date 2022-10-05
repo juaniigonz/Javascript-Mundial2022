@@ -105,7 +105,7 @@ const agregarAlCarrito = (prodId) => {
     const existe = carrito.some(prod => prod.id === prodId)
     
     if(existe){
-        const prod = carrito.map(prod=>{
+        carrito.forEach(prod=>{
             if(prod.id === prodId){
             prod.cantidad++
             }

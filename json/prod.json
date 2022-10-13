@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "objeto": "Camiseta Titular Arg",
+      "precio": 19000,
+      "img": "../img/tienda/camisetaArgentinaTit.jpg",
+      "cantidad": 1
+    },
+    {
+      "id": 2,
+      "objeto": "Camiseta Suplente Arg",
+      "precio": 17500,
+      "img": "../img/tienda/camisetaArgentinaSup.jpg",
+      "cantidad": 1
+    },
+    {
+      "id": 3,
+      "objeto": "Campera Argentina",
+      "precio": 20000,
+      "img": "../img/tienda/camperaArgentina.jpg",
+      "cantidad": 1
+    },
+    {
+      "id": 4,
+      "objeto": "Short Argentina",
+      "precio": 7500,
+      "img": "../img/tienda/shortArgentinaTit.jpg",
+      "cantidad": 1
+    },
+    {
+      "id": 5,
+      "objeto": "Pelota Qatar 2022",
+      "precio": 8000,
+      "img": "../img/tienda/pelotaMundial.jpg",
+      "cantidad": 1
+  },
+    {
+      "id": 6,
+      "objeto": "Estampa del Messias",
+      "precio": 3000,
+      "img": "../img/tienda/messias.jpg",
+      "cantidad": 1
+  },
+  {
+      "id": 7,
+      "objeto": "Estampa Santo Maradona",
+      "precio": 3000,
+      "img": "../img/tienda/santoDiego.jpg",
+      "cantidad": 1
+  },
+  {
+      "id": 8,
+      "objeto": "Cuadro Argentina Campeon",
+      "precio": 15000,
+      "img": "../img/tienda/cuadroSeleccion.jpg",
+      "cantidad": 1
+  }
+  ]

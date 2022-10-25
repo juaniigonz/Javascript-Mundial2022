@@ -283,7 +283,7 @@ function appendChildren(parent, children) {
 document.addEventListener('DOMContentLoaded', () => {
 
   // Unix timestamp (in seconds) to count down to
-  var twoDaysFromNow = (new Date().getTime() / 1000) + (86400 * 46.9064) + 1;
+  var twoDaysFromNow = (new Date().getTime() / 1000) + (86400 * 3) + 1;
 
   // Set up FlipDown
   var flipdown = new FlipDown(twoDaysFromNow)

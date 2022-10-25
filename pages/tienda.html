@@ -9,7 +9,8 @@
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"/>
-    <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="sweetalert2.min.css">
+      <link rel="stylesheet" href="../css/style.css" />
     <title>Document</title>
   </head>
   <body>
@@ -38,9 +39,46 @@
         </div>
         <p class="precioProducto">Precio Total : $<span id="precioTotal">0</span></p>
         <button id="vaciarCarrito" class="botonAgregar">Vaciar carrito</button>
+        <button id="finalizarCompra" class="btnFinalizar">Finalizar Compra</button>
       </div>
     </div>
+
+      <section class="pago" id="pagar">
+        <article  class="modalPago">
+          <button id="pagoCerrar"><i class="fas fa-times-circle"></i></button>
+          <h3>Metodo de Pago</h3>
+          <div>
+            <label for="transferencia">Transferencia</label>
+            <input type="radio" name="type-pay" id="transferencia" required>
+          </div>
+          <div>
+            <label for="efectivo">Efectivo</label>
+            <input type="radio" name="type-pay" id="efectivo">
+          </div>
+          <div>
+            <label for="tarjeta">Tarjeta</label>
+            <input type="radio" name="type-pay" id="tarjeta">
+          </div>
+          <h3>Datos del facturacion</h3>
+          <div>
+            <input type="text" placeholder="Ingrese su nombre">
+            <input type="text" placeholder="Ingrese su apellido">
+          </div>
+          <div>
+            <h4>Email</h4>
+            <input type="text" placeholder="Ingrese su email">
+          </div>
+          <div>
+            <h4>Domicilio</h4>
+            <input type="text" placeholder="Ingrese su domicilio">
+          </div>
+          <div>
+            <button id="build">Finalizar Compra</button>
+          </div>
+        </article>
+      </section>
     <script src="../js/tienda.js"></script>
     <script src="../js/modal.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

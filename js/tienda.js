@@ -1,62 +1,3 @@
-// let objTienda = [
-//   {
-//     id: 1,
-//     objeto: "Camiseta Titular Arg",
-//     precio: 19000,
-//     img: "../img/tienda/camisetaArgentinaTit.jpg",
-//     cantidad: 1,
-//   },
-//   {
-//     id: 2,
-//     objeto: "Camiseta Suplente Arg",
-//     precio: 17500,
-//     img: "../img/tienda/camisetaArgentinaSup.jpg",
-//     cantidad: 1,
-//   },
-//   {
-//     id: 3,
-//     objeto: "Campera Argentina",
-//     precio: 20000,
-//     img: "../img/tienda/camperaArgentina.jpg",
-//     cantidad: 1,
-//   },
-//   {
-//     id: 4,
-//     objeto: "Short Argentina",
-//     precio: 7500,
-//     img: "../img/tienda/shortArgentinaTit.jpg",
-//     cantidad: 1,
-//   },
-//   {
-//     id: 5,
-//     objeto: "Pelota Qatar 2022",
-//     precio: 8000,
-//     img: "../img/tienda/pelotaMundial.jpg",
-//     cantidad: 1,
-// },
-//   {
-//     id: 6,
-//     objeto: "Estampa del Messias",
-//     precio: 3000,
-//     img: "../img/tienda/messias.jpg",
-//     cantidad: 1,
-// },
-// {
-//     id: 7,
-//     objeto: "Estampa Santo Maradona",
-//     precio: 3000,
-//     img: "../img/tienda/santoDiego.jpg",
-//     cantidad: 1,
-// },
-// {
-//     id: 8,
-//     objeto: "Cuadro Argentina Campeon",
-//     precio: 15000,
-//     img: "../img/tienda/cuadroSeleccion.jpg",
-//     cantidad: 1,
-// },
-// ];
-
 const divTienda = document.getElementById("tienda");
 const contenedorCarrito = document.getElementById("carritoContenedor");
 const btnVaciar = document.getElementById("vaciarCarrito");
@@ -72,7 +13,6 @@ let carrito = [];
 document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("carrito")) {
     carrito = JSON.parse(localStorage.getItem("carrito"));
-    console.log(carrito);
     actCarrito();
   }
 });
@@ -101,35 +41,32 @@ fetch(productos)
 
       const boton = document.getElementById(`agregar${producto.id}`);
       boton.addEventListener("click", () => {
-        agregarAlCarrito(producto.id);
+        agregarAlCarrito(producto);
       });
-      const agregarAlCarrito = (prodId) => {
-        const existe = carrito.some((prod) => prod.id === prodId);
-      
-        if (existe) {
-          carrito.forEach((prod) => {
-            if (prod.id === prodId) {
-              prod.cantidad++;
-            }
-          });
-        } else {
-          const item = datos.find((prod) => prod.id === prodId);
-          carrito.push(item);
-        }
-        actCarrito();
-      };
-      
     });
-});
+  });
 
+const agregarAlCarrito = (item) => {
+  const existe = carrito.some((prod) => prod.id === item.id);
 
+  if (existe) {
+    carrito.forEach((prod) => {
+      if (prod.id === item.id) {
+        prod.cantidad++;
+      }
+    });
+  } else {
+    carrito.push(item);
+  }
+  actCarrito();
+};
 
 // ------------Eliminar del carrito----------//
 
 const eliminarDelCarrito = (prodId) => {
   const item = carrito.find((prod) => prod.id === prodId);
-  const i = carrito.indexOf(item);
-  carrito.splice(i, 1);
+  carrito.splice(carrito.indexOf(item), 1);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
   actCarrito();
 };
 //---------creacion del carrito
@@ -161,5 +98,22 @@ const actCarrito = () => {
 
 btnVaciar.addEventListener("click", () => {
   carrito.length = 0;
+  localStorage.removeItem("carrito");
   actCarrito();
+});
+
+// finalizar compra
+const notificacion = document.getElementById("build");
+
+notificacion.addEventListener("click", () => {
+  Swal.fire({
+    title: "Compra realizada con exito, vuelva pronto!",
+    icon: "success",
+    confirmButtonText: "Aceptar",
+    confirmButtonColor: "#ff4e50",
+  });
+  carrito.length = 0;
+  localStorage.removeItem("carrito");
+  actCarrito();
+  finalizarPago.classList.toggle('pagoAct')
 });
